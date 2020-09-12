@@ -17,7 +17,6 @@ class Profile extends Component {
   };
 
   render() {
-    const userData = this.state.userData;
     return (
       <div id="profile-page">
         <h1>User Profile</h1>
@@ -30,7 +29,8 @@ class Profile extends Component {
             })}
           </h4>
           {formFields.map((field, index) => {
-            if (field.name === 'location' || field.name === 'company' || field.name === 'headline') {
+            // TO DO: find more dynamic way to define profile sections
+            if (index > 3) {
               return <div className="section" id={field.name} key={index}>
                 <p>{field.label}:</p>
                 {(this.state.userData).map((input, index) => {

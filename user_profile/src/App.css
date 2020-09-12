@@ -7,12 +7,19 @@
 }
 
 /* ----- Global Styles ----- */
+:root {
+  background: rgb(122, 122, 122);
+  color: white;
+}
+
 h1 {
-  margin: 20px;
+  font-weight: lighter;
+  margin: 30vh auto 20px;
   text-align: center;
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -20,53 +27,105 @@ div {
   text-align: center;
 }
 
-button, button a {
-  color: black;
-  display: inline-block;
-  padding: 10px;
+button {
+  background-image: linear-gradient(rgb(66,139,202) 50%, rgb(135, 185, 228));
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 12px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 400px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px;
-  text-align: left;
-}
-
-label {
-  width: 80px;
-}
-
-input {
-  height: 30px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  border: 1px solid rgb(60, 60, 60);
+  box-shadow: 0 0 0 30px white inset;
 }
 
 .hide {
   display: none;
 }
 
-#profile {
-  margin: 10px auto;
-  max-width: 400px;
+/* ----- Landing Page Styles ----- */
+#landing h4 {
+  font-weight: lighter;
+  margin: 20px;
 }
 
-h4 {
+#landing button, button a {
+  color: white;
+  display: inline-block;
+}
+
+/* ----- Form Page Styles ----- */
+#form form {
+  margin: 0 auto;
+}
+
+.form-group {
+  /* background: white; */
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 30px 5px;
+  text-align: left;
+  width: 90%;
+}
+
+.form-group label {
+  /* color: black; */
+  /* border: 1px solid white; */
+  margin: 0 10px;
+  padding-top: 3px;
+  text-align: right;
+  width: 20%;
+}
+
+.form-group input {
+  background: white;
+  border: 1px solid rgb(60, 60, 60);
+  height: 30px;
+  padding-left: 5px;
+  /* width: 50%; */
+}
+
+#form button {
+  color: white;
+  margin: 0 10px;
+  padding: 0 20px;
+  /* width: 15%; */
+}
+
+#form button a {
+  padding: 12px;
+}
+
+/* ----- Profile Page Styles ----- */
+#profile-page h1 {
+  margin: 10vh auto 40px;
+}
+
+#profile {
+  background: white;
+  margin: 10px auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+#profile h4 {
+  color: black;
   font-size: 2em;
   font-weight: lighter;
-  margin: 50px auto 10px;
+  margin: 10px auto;
   text-align: left;
 }
 
 .section {
-  background: rgb(172, 213, 255);
+  background: rgb(135, 185, 228);
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -78,6 +137,11 @@ p {
   margin-right: 5px;
 }
 
-
+@media screen and (min-width: 768px) {
+  .form-group {
+    display: flex;
+    flex-direction: row;
+  }
+}
 
 

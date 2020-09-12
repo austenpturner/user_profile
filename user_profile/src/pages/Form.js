@@ -56,7 +56,7 @@ class Form extends Component {
   render() {
     return (
       <div id="form">
-        <h1>Form</h1>
+        <h1>Profile Generator</h1>
         <form>
           <FormGroup 
             type={this.state.type}

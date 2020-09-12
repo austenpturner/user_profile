@@ -5,11 +5,10 @@ class Landing extends Component {
     return (
       <div id="landing">
         <h1>Welcome!</h1>
-        <div>
+        <h4>Enter some information about yourself to generate a profile.</h4>
         <button>
             <a href="/form">Start Profile</a>
         </button>
-        </div>
       </div>
     );
   }
